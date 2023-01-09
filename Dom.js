@@ -30,18 +30,26 @@ title.style.fontWeight="bold"
 
 
 //GETELEMENTBYCLASSNAME//
-var items = document.getElementsByClassName("list-group-item");
-// console.log(items)
-// console.log(items[2])
-// items[1].textContent = "Hello"
-// items.style.backgroundColor = '#f4f4f4'//it gives error- have to spcify index or iterate throgh loop.
-// for(let i =0; i<items.length;i++){
-//     items[i].style.backgroundColor="lightblue"
+// var items = document.getElementsByClassName("list-group-item");
+// // console.log(items)
+// // console.log(items[2])
+// // items[1].textContent = "Hello"
+// // items.style.backgroundColor = '#f4f4f4'//it gives error- have to spcify index or iterate throgh loop.
+// // for(let i =0; i<items.length;i++){
+// //     items[i].style.backgroundColor="lightblue"
+// // }
+// // task-2
+// items[2].style.backgroundColor='green'
+// for(let i=0; i<items.length; i++){
+//     items[i].style.fontWeight="bold"
 // }
-// task-2
-items[2].style.backgroundColor='green'
-for(let i=0; i<items.length; i++){
-    items[i].style.fontWeight="bold"
-}
 
+
+// GETELEMENTBYTAGNAME//
+// task-3
+// Allmost same as getelementbyclassname
+var li = document.getElementsByTagName("li");
+for(let i =0; i<li.length;i++){
+        li[i].style.backgroundColor="lightblue"
+    }
 
