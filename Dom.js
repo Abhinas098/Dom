@@ -74,15 +74,92 @@ input.placeholder="Enter a item"
 // console.log(titles[0].textContent='Hello')
 
 // Task-3
-var odd=document.querySelectorAll('li:nth-child(odd)');
+// var odd=document.querySelectorAll('li:nth-child(odd)');
 
-for (var i =0; i<odd.length; i++){
-    odd[i].style.backgroundColor="Green"
-}
-let Second = document.querySelector('.list-group-item:nth-child(2)');
-Second.style.backgroundColor="Green"
-// var even = document.querySelectorAll('li:nth-child(even)');
-// for (let i = 0; i<even.length; i++){
-//     even[i].style.backgroundColor="lightGreen"
+// for (var i =0; i<odd.length; i++){
+//     odd[i].style.backgroundColor="Green"
 // }
+// let Second = document.querySelector('.list-group-item:nth-child(2)');
+// Second.style.backgroundColor="Green"
+// // var even = document.querySelectorAll('li:nth-child(even)');
+// // for (let i = 0; i<even.length; i++){
+// //     even[i].style.backgroundColor="lightGreen"
+// // }
+
+
+
+// TRAVERSING THE DOM //
+var itemList = document.querySelector('#items');
+// Parentnode//
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor="black"
+// console.log(itemList.parentNode.parentNode.parentNode);
+// Parentelement//
+// Both parent element and nod are same.
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor="black"
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// ChildNodes //
+// console.log(itemList.childNodes); // it shows with linebreak index.
+// Children//
+// console.log(itemList.children); //it gives only eleents with their index.(mainly used this)
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = "lightblue"
+
+// First-Child//
+// console.log(itemList.firstChild)//it also gives index of all space child like Childnode.
+// First-Element-Cild//
+// console.log(itemList.firstElementChild)//it oly sows the elements with index
+// itemList.firstElementChild.textContent="Hello"
+
+// Last-Child//
+// console.log(itemList.lastChild)//it also gives index of all space like firstchild.
+// // Last-Element-Cild//
+// console.log(itemList.lastElementChild)//it oly sows the elements with index
+// itemList.lastElementChild.textContent="Hello"
+
+var item = document.querySelector('.list-group-item');
+// nextSibling//
+// console.log(item.nextSibling)//same as above therfore use elementsibling
+//nextElementSibling//
+// console.log(item.nextElementSibling)
+
+// previousSibling//
+// console.log(itemList.previousSibling)
+// previousElementSibling//
+// console.log(itemList.previousElementSibling)
+itemList.previousElementSibling.style.color="green"
+
+// CREATEELEMENT//
+// create div//
+var newDiv = document.createElement('div');
+var newDiv2 = document.createElement('div');
+
+// Add id//
+newDiv.id = 'hii'
+// Add class
+newDiv.className ='hello'
+// Add Attribute
+newDiv.setAttribute('title', 'Hello')
+
+// Create TEXTNODE//
+var newDivText = document.createTextNode('Hello World')
+var newDiv2Text = document.createTextNode('hello world')
+
+// Append-CHILD
+newDiv.appendChild(newDivText)
+newDiv2.appendChild(newDiv2Text)
+
+// INSERT-Before
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv, h1)
+
+var main = document.querySelector('div #main');
+var ul = document.querySelector('div ul');
+main.insertBefore(newDiv2, ul)
+
+
+
 
