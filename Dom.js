@@ -1,6 +1,6 @@
-// console.dir(document);
-
 // Examine the  Document object.
+
+// console.dir(document);
 // console.log(document.domain)
 // console.log(document.URL);
 // console.log(document.title);
@@ -22,4 +22,9 @@
 // // headTitle.textContent = "hello"
 // // headTitle.innerText = "godd byy"
 // // headTitle.innerHTML ="<h1>Hello</H2>"
-// headTitle = 
+var head = document.getElementById('main-header');
+head.style.borderBottom = 'solid 2px black'
+var title = document.getElementById('h2');
+title.style.color ="green"
+title.style.fontWeight="bold"
+
