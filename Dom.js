@@ -47,9 +47,42 @@ title.style.fontWeight="bold"
 
 // GETELEMENTBYTAGNAME//
 // task-3
-// Allmost same as getelementbyclassname
-var li = document.getElementsByTagName("li");
-for(let i =0; i<li.length;i++){
-        li[i].style.backgroundColor="lightblue"
-    }
+// var li = document.getElementsByTagName("li");
+// for(let i =0; i<li.length;i++){
+//         li[i].style.backgroundColor="lightblue"
+//     }
+
+
+// querySelector//
+// let header = document.querySelector('#main-header')
+// header.style.borderBottom="solid 4px #ccc"
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = "Add"
+// let item = document.querySelector('.list-group-item');
+// item.style.color="yellow"
+// let last = document.querySelector('.list-group-item:last-child');
+// last.style.color="red"
+// let Second = document.querySelector('.list-group-item:nth-child(2)');
+// Second.style.color="Blue"
+var input= document.querySelector('input')
+input.placeholder="Enter a item"
+
+
+// querySelectorAll//
+// Querselector returns a single element whereas querySelectorAll returns array of elements
+// var titles = document.querySelectorAll('.title')
+// console.log(titles[0].textContent='Hello')
+
+// Task-3
+var odd=document.querySelectorAll('li:nth-child(odd)');
+
+for (var i =0; i<odd.length; i++){
+    odd[i].style.backgroundColor="Green"
+}
+let Second = document.querySelector('.list-group-item:nth-child(2)');
+Second.style.backgroundColor="Green"
+// var even = document.querySelectorAll('li:nth-child(even)');
+// for (let i = 0; i<even.length; i++){
+//     even[i].style.backgroundColor="lightGreen"
+// }
 
